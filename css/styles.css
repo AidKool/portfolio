@@ -1,0 +1,118 @@
+header.main-header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.8rem 2rem;
+}
+
+li.menu-item {
+  display: inline;
+  margin: 0.3rem 1rem;
+}
+
+li.menu-item:hover {
+  border-bottom: 3px solid orange;
+}
+
+main section.profile-section,
+footer section.profile-section {
+  padding: 1rem 0;
+}
+
+section.profile-section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.profile-section p {
+  text-align: justify;
+}
+
+figure.profile {
+  width: 50%;
+  min-width: 100px;
+  max-width: 150px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+figure.profile img {
+  width: 100%;
+  min-width: 100px;
+  max-width: 150px;
+}
+
+ul.projects {
+  width: 100%;
+}
+
+li.project {
+  position: relative;
+}
+
+li.project a {
+  width: 100%;
+}
+
+li.project a img {
+  width: 100%;
+}
+
+li.project figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 70%;
+  font-size: 1.5rem;
+  background-color: white;
+  text-align: center;
+  line-height: 1;
+  padding: 1rem 0;
+  font-weight: 900;
+}
+
+footer .profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.25rem;
+}
+
+footer li {
+  display: inline;
+  width: 50%;
+}
+
+footer img {
+  width: 100%;
+  max-width: 50px;
+}
+
+ul.footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
