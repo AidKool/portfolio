@@ -8,32 +8,48 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#profile p,
+#profile h1 {
+  text-align: center;
+}
+
+#profile p {
+  font-size: 1.4rem;
+  line-height: 1.15;
+  color: #003049;
+}
+
+.main-header {
+  height: 100vh;
+  background: #eae2b7;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  background: white;
-  width: 95%;
-  max-width: var(--max-width);
+  background: #003049;
+  width: 100%;
   padding: 0.8rem 1rem;
-  padding-right: 0;
-  margin-right: -1rem;
+  z-index: 10;
+  position: fixed;
 }
 
 li.menu-item {
   display: inline;
-  padding: 0.3rem 1rem;
-  /* transition: all 0.3s ease 0s; */
-}
-
-/* li.menu-item:hover {
-  background:
-} */
-
-li.menu-item:nth-child(2) {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0 0.5rem;
 }
 
 li.menu-item:hover {
@@ -45,14 +61,17 @@ li.menu-item:hover {
 
 @keyframes background-menu-item {
   100% {
-    border-radius: 5px;
-    background: #9ee5dd;
+    background: #d62828;
   }
 }
 
 main section.profile-section,
 footer section.profile-section {
   padding: 1rem 0;
+}
+
+li.menu-item a {
+  color: white;
 }
 
 section.profile-section {
