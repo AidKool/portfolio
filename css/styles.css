@@ -1,3 +1,7 @@
+:root {
+  --max-width: 1000px;
+}
+
 header.main-header,
 main,
 footer {
@@ -9,13 +13,16 @@ footer {
 nav {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  padding: 0.8rem 2rem;
+  width: 95%;
+  max-width: var(--max-width);
+  padding: 0.8rem 1rem;
+  padding-right: 0;
 }
 
 li.menu-item {
   display: inline;
   margin: 0.3rem 1rem;
+  margin-right: 0;
 }
 
 li.menu-item:hover {
@@ -28,7 +35,8 @@ footer section.profile-section {
 }
 
 section.profile-section {
-  width: 90%;
+  width: 95%;
+  max-width: var(--max-width);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,18 +64,35 @@ figure.profile img {
 
 ul.projects {
   width: 100%;
+  /* max-width: 1000px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 li.project {
   position: relative;
+  width: 100%;
+  height: 100%;
+  /* max-width: calc(var(--max-width) / 2); */
+  max-height: 400px;
+}
+
+li.project img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 li.project a {
   width: 100%;
+  height: 100%;
 }
 
-li.project a img {
+img.project-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 li.project figcaption {
@@ -115,4 +140,36 @@ ul.footer {
   row-gap: 1rem;
   justify-items: center;
   align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+}
+
+@media screen and (min-width: 769px) {
+  ul.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(auto, 300px) auto auto;
+  }
+  li#first-project {
+    grid-column: 1 / span 2;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: flex-end;
+  }
+
+  li#first-project img {
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+  ul.footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+}
+
+@media screen and (min-width: 1201px) {
 }
