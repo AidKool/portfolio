@@ -1,3 +1,7 @@
+/**********
+GLOBAL
+***********/
+
 * {
   box-sizing: border-box;
 }
@@ -6,9 +10,18 @@ body {
   font-size: 16px;
 }
 
+i,
+i * {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/**********
+LISTS
+***********/
+
 ul,
-ol,
-p {
+ol {
   padding: 0;
   margin: 0;
 }
@@ -18,16 +31,51 @@ ol {
   list-style: none;
 }
 
+/**********
+PARAGRAPHS
+***********/
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+/**********
+PARAGRAPHS
+***********/
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/**********
+LINKS
+***********/
+
 a,
 a:hover,
 a:active,
 a:visited {
   text-decoration: none;
   color: black;
-}
-
-i,
-i * {
-  font-style: normal;
-  font-weight: normal;
 }
