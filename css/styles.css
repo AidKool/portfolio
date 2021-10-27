@@ -271,7 +271,7 @@ CONTACT
   transform: scale(1.2);
 }
 
-i {
+.contact-options li span {
   font-size: var(--margin-double);
 }
 
