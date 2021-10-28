@@ -23,6 +23,7 @@ VARIABLES
   --dark-blue: #001c54;
   --white: #ffffff;
   --beige: #eae2b7;
+  --light-orange: #fdd587;
   --dark-red: #d62828;
   --black: #000000;
 
@@ -58,6 +59,14 @@ footer {
 /************
 SECTIONS
 *************/
+
+.main-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .profile-section {
   width: 95%;
@@ -161,6 +170,10 @@ ABOUT ME
 PROJECTS
 *************/
 
+.projects-section {
+  background: var(--white);
+}
+
 .projects {
   width: 100%;
   margin-top: var(--margin-standard);
@@ -207,7 +220,7 @@ PROJECTS
   width: 100%;
   opacity: 95%;
   font-size: var(--font-size-extra-large);
-  background-color: var(--beige);
+  background-color: var(--white);
   text-align: center;
   line-height: var(--line-height-basic);
   padding: var(--padding-extra-small) 0;
@@ -244,6 +257,15 @@ PROJECTS
 /************
 CONTACT
 *************/
+
+.contact-section {
+  height: calc(50vh - 4rem);
+  background: var(--beige);
+}
+
+.profile-section:last-child {
+  row-gap: 3rem;
+}
 
 #contact h2,
 #contact p {
