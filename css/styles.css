@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /**********
 VARIABLES
 ***********/
@@ -23,6 +25,9 @@ VARIABLES
   --beige: #eae2b7;
   --dark-red: #d62828;
 
+  /* FONTS */
+  --font-family-default: 'Roboto', sans-serif;
+
   /* FONT SIZES */
   --font-size-standard: 1rem;
   --font-size-large: 1.4rem;
@@ -44,6 +49,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-family-default);
 }
 
 /************
@@ -128,7 +134,7 @@ ABOUT ME
 }
 
 #profile p {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-extra-large);
   color: var(--dark-blue);
 }
 
@@ -268,6 +274,7 @@ CONTACT
 .contact-text {
   margin-left: var(--margin-standard);
   font-weight: normal;
+  font-family: var(--font-family-default);
 }
 
 /************
