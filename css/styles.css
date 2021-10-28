@@ -24,11 +24,14 @@ VARIABLES
   --white: #ffffff;
   --beige: #eae2b7;
   --dark-red: #d62828;
+  --black: #000000;
 
   /* FONTS */
   --font-family-default: 'Roboto', sans-serif;
 
   /* FONT SIZES */
+  --font-size-extra-small: 0.75rem;
+  --font-size-small: 0.9rem;
   --font-size-standard: 1rem;
   --font-size-large: 1.4rem;
   --font-size-extra-large: 1.5rem;
@@ -173,19 +176,15 @@ PROJECTS
   height: 100%;
   max-height: 400px;
   overflow: hidden;
-  transition: opacity 150ms;
+  transition: all 150ms linear;
 }
 
 .project:hover {
   opacity: 80%;
 }
 
-.project img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.project article,
+.project figure,
 .project a {
   width: 100%;
   height: 100%;
@@ -197,17 +196,34 @@ PROJECTS
   object-fit: cover;
 }
 
-.project figcaption {
+.description {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--margin-standard);
   bottom: 0;
   width: 100%;
-  opacity: 70%;
+  opacity: 95%;
   font-size: var(--font-size-extra-large);
-  background-color: var(--white);
+  background-color: var(--beige);
   text-align: center;
   line-height: var(--line-height-basic);
-  padding: var(--padding-standard) 0;
+  padding: var(--padding-extra-small) 0;
   font-weight: 900;
+  transition: all 150ms linear;
+}
+
+.project:hover .description {
+  background: var(--black);
+  opacity: 100%;
+  color: var(--white);
+}
+
+.description p {
+  font-size: var(--font-size-small);
+  font-weight: normal;
 }
 
 @media screen and (min-width: 769px) {
@@ -215,7 +231,6 @@ PROJECTS
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: minmax(auto, 300px) auto auto;
-    /* gap: 1rem; */
   }
 
   #first-project {
@@ -223,12 +238,6 @@ PROJECTS
     max-width: 100%;
     max-height: 100%;
     align-self: flex-end;
-  }
-
-  #first-project img {
-    width: 100%;
-    max-height: 100%;
-    height: 100%;
   }
 }
 
@@ -250,7 +259,7 @@ CONTACT
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  row-gap: 1rem;
+  row-gap: var(--margin-standard);
   justify-content: center;
   align-items: center;
 }
