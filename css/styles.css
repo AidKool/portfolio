@@ -86,19 +86,11 @@ nav {
   display: inline;
   padding: var(--padding-small) var(--padding-standard);
   margin: 0 var(--margin-extra-small);
+  transition: background 300ms;
 }
 
 .menu-item:hover {
-  animation-name: background-menu-item;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-}
-
-@keyframes background-menu-item {
-  100% {
-    background: var(--dark-red);
-  }
+  background: var(--dark-red);
 }
 
 .menu-item a {
@@ -124,10 +116,6 @@ ABOUT ME
 #profile p,
 #profile h1 {
   text-align: center;
-}
-
-#profile h1 {
-  font-size: 5;
 }
 
 #profile p {
@@ -157,9 +145,11 @@ PROJECTS
 
 .projects {
   width: 100%;
+  margin-top: var(--margin-standard);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--padding-small);
 }
 
 .project {
@@ -168,22 +158,11 @@ PROJECTS
   height: 100%;
   max-height: 400px;
   overflow: hidden;
+  transition: opacity 150ms;
 }
 
 .project:hover {
-  animation-name: highlight-project;
-  animation-duration: 150ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-
-@keyframes highlight-project {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 80%;
-  }
+  opacity: 80%;
 }
 
 .project img {
