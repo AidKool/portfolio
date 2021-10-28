@@ -75,6 +75,7 @@ NAVBAR
 nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   background: var(--dark-blue);
   width: 100%;
   padding: var(--padding-small) var(--padding-standard);
@@ -82,22 +83,30 @@ nav {
   position: fixed;
 }
 
-.menu-item {
-  display: inline;
-  padding: var(--padding-small) var(--padding-standard);
-  margin: 0 var(--margin-extra-small);
-  transition: background 300ms;
+.menu {
+  display: flex;
+  height: 100%;
 }
 
-.menu-item:hover {
-  background: var(--dark-red);
+.menu-item {
+  width: fit-content;
+  height: 100%;
+  margin: 0 var(--margin-extra-small);
 }
 
 .menu-item a {
+  text-align: center;
   color: var(--white);
   line-height: var(--line-height-large);
+  padding: var(--padding-small) var(--padding-standard);
+  margin: 0;
   width: 100%;
   height: 100%;
+  transition: background 300ms;
+}
+
+.menu-item a:hover {
+  background: var(--dark-red);
 }
 
 /************
