@@ -6,12 +6,14 @@ VARIABLES
 
 :root {
   /* GLOBAL */
-  --max-width: 1000px;
+  --max-width: 1280px;
 
   /* PADDING */
   --padding-extra-small: 0.5rem;
   --padding-small: 0.8rem;
   --padding-standard: 1rem;
+  --padding-large: 1.2rem;
+  --padding-extra-large: 1.5rem;
 
   /* MARGIN */
   --margin-extra-small: 0.5rem;
@@ -75,7 +77,6 @@ SECTIONS
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: var(--padding-standard);
 }
 
 /************
@@ -176,9 +177,14 @@ PROJECTS
   background: var(--white);
 }
 
+.projects-section h2 {
+  text-align: center;
+}
+
 .projects {
   width: 100%;
-  margin-top: var(--margin-standard);
+  padding: var(--margin-double) 0;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,6 +252,7 @@ PROJECTS
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: minmax(auto, 300px) auto auto;
+    gap: var(--padding-standard);
   }
 
   #first-project {
@@ -253,6 +260,20 @@ PROJECTS
     max-width: 100%;
     max-height: 100%;
     align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(auto, 350px) auto;
+    gap: var(--padding-large);
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .projects {
+    gap: var(--padding-extra-large);
   }
 }
 
@@ -265,7 +286,7 @@ CONTACT
   background: var(--beige);
 }
 
-.profile-section:last-child {
+.contact-section .profile-section {
   row-gap: 3rem;
 }
 
