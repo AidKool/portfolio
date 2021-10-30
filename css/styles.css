@@ -7,6 +7,8 @@ VARIABLES
 :root {
   /* GLOBAL */
   --max-width: 1280px;
+  --nav-height: 3rem;
+  --footer-height: 4rem;
 
   /* PADDING */
   --padding-extra-small: 0.5rem;
@@ -98,7 +100,8 @@ nav {
   align-items: center;
   background: var(--dark-blue);
   width: 100%;
-  padding: var(--padding-small) var(--padding-standard);
+  height: var(--nav-height);
+  padding: 0 var (--padding-standard);
   z-index: 10;
   position: fixed;
 }
@@ -109,16 +112,16 @@ nav {
 }
 
 .menu-item {
-  width: fit-content;
-  height: 100%;
   margin: 0 var(--margin-extra-small);
 }
 
 .menu-item a {
+  display: flex;
   text-align: center;
+  align-items: center;
   color: var(--white);
   line-height: var(--line-height-large);
-  padding: var(--padding-small) var(--padding-standard);
+  padding: 0 var(--padding-standard);
   margin: 0;
   width: 100%;
   height: 100%;
@@ -133,6 +136,10 @@ nav {
 /************
 ABOUT ME
 *************/
+
+.main-header .profile-section {
+  margin-top: var(--nav-height);
+}
 
 #profile {
   display: flex;
@@ -341,7 +348,7 @@ FOOTER
 *************/
 
 footer {
-  height: 4rem;
+  height: var(--footer-height);
   background: var(--dark-blue);
   color: var(--white);
   justify-content: center;
