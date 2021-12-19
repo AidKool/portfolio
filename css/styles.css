@@ -54,6 +54,10 @@ VARIABLES
 MAIN SECTIONS
 *************/
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-header,
 main,
 footer {
