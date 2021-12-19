@@ -99,42 +99,100 @@ NAVBAR
 *************/
 
 nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: var(--dark-blue);
+  background: var(--white);
   width: 100%;
-  height: var(--nav-height);
-  padding: 0 var (--padding-standard);
-  z-index: 10;
   position: fixed;
+  z-index: 10;
+}
+
+.nav-header {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 1rem 1.5rem;
+  background: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--white);
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.menu-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 250ms ease-in-out;
+  padding: -1rem 0 -1rem -1.5rem;
 }
 
 .menu {
+  padding: 1rem 1.5rem;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 
-.menu-item {
-  margin: 0 var(--margin-extra-small);
+.menu a {
+  border-bottom: 2px solid transparent;
+  background: var(--white);
+  color: var(--black);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  /* padding: 0.75rem 0; */
 }
 
-.menu-item a {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  color: var(--white);
-  line-height: var(--line-height-large);
-  padding: 0 var(--padding-standard);
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  transition: background 300ms;
-  font-size: var(--font-size-standard);
+.menu a:hover {
+  border-color: black;
+  transition: all 200ms ease-in-out;
 }
 
-.menu-item a:hover {
-  background: var(--dark-red);
+@media screen and (min-width: 576px) {
+  nav {
+    background: var(--dark-blue);
+  }
+
+  .nav-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-header {
+    width: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+  .menu-container {
+    height: auto !important;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .menu a {
+    background: transparent;
+    color: var(--white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .menu a:hover {
+    border-color: var(--white);
+    transition: border-color 200ms ease-in-out;
+  }
 }
 
 /************

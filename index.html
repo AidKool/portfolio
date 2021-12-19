@@ -13,17 +13,26 @@
   <body>
     <header class="main-header">
       <nav>
-        <ul class="menu">
-          <li class="menu-item">
-            <a href="#profile">About me</a>
-          </li>
-          <li class="menu-item">
-            <a href="#projects">Projects</a>
-          </li>
-          <li class="menu-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div class="nav-center">
+          <div class="nav-header">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <div class="menu-container">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#profile">About me</a>
+              </li>
+              <li class="menu-item">
+                <a href="#projects">Projects</a>
+              </li>
+              <li class="menu-item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <section class="profile-section" id="profile">
         <figure class="profile">
@@ -182,6 +191,6 @@
     <footer>
       <p>&copy; 2021 All Rights Reserved</p>
     </footer>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
