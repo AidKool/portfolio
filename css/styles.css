@@ -120,18 +120,21 @@ nav {
 }
 
 .nav-toggle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   color: var(--white);
   background: transparent;
-  border-color: transparent;
+  border: none;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .menu-container {
   height: 0;
   overflow: hidden;
   transition: height 250ms ease-in-out;
-  padding: -1rem 0 -1rem -1.5rem;
 }
 
 .menu {
